@@ -1,0 +1,19 @@
+<%- include('../partials/header.ejs') %>
+
+    <div class="row">
+        <div class="col-6">
+            <img src="<%= showjob.image %>" class="img-fluid" alt="...">
+        </div>
+        <div class="col-6">
+            <%= showjob.name %>
+            <%= showjob.address %>
+            <form action="/jobs/<%= showjob._id %>?_method=DELETE" method="post">
+                <input type="submit" value="delete">
+            </form>
+        
+            <form action="/jobs/<%= showjob._id %>/edit" method="get">
+                <input type="submit" value="Edit">
+            </form>
+        </div>
+    </div>
+<%- include('../partials/footer.ejs') %>

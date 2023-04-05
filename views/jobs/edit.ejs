@@ -1,0 +1,27 @@
+<%- include('../partials/header.ejs') %>
+
+
+    <div class="row">
+        <div class="col-4 m-auto">
+            <h1>edit form to edit job <%= editjobs.name %></h1>
+            <form action="/jobs/<%= editjobs._id %>?_method=PATCH" method="post">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Enter job name</label>
+                  <input type="text" value="<%= editjobs.name %>" class="form-control" name="name" id="name" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                  <label for="address" class="form-label">Enter location</label>
+                  <input type="text" value="<%= editjobs.address %>" class="form-control" name="address" id="address" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                  <label for="image" class="form-label">Enter logo</label>
+                  <input type="text" value="<%= editjobs.image %>" class="form-control" name="image" id="image" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                  <input type="submit" value="update job">
+                </div>
+            </form>
+        </div>
+    </div>
+
+<%- include('../partials/footer.ejs') %>

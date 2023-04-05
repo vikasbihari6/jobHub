@@ -1,0 +1,12 @@
+<%- include('../partials/header.ejs') %>
+
+    <h1>list of all jobs</h1>
+    <%  for(let list of foundJobs){ %>
+        
+        <div class="col-4">
+            <%= list.name %>
+            <a href="/jobs/<%= list._id %>">show more</a>
+        </div>
+        
+    <%  } %>
+<%- include('../partials/footer.ejs') %>
